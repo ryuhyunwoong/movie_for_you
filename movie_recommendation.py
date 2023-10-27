@@ -20,7 +20,7 @@ Tfidf_matrix = mmread('./models/Tfidf_movie_review.mtx').tocsr()
 with open('./models/tfidf.pickle', 'rb') as f:
     Tfidf = pickle.load(f)
 
-# 영화 리뷰 기반 추천
+############################## 영화 리뷰 기반 추천##############################
 # print(df_reviews.iloc[383, 0])
 # cosine_sim = linear_kernel(Tfidf_matrix[383], Tfidf_matrix)
 # print(cosine_sim[0])
@@ -55,8 +55,8 @@ with open('./models/tfidf.pickle', 'rb') as f:
 # except:
 #     print('다른 키워드를 이용하세요')
 
-# 문장 기반 추천
-sentence = '화려한 액션과 소름 돋는 반전이 있는 영화'
+################## 문장 기반 추천 ############################
+sentence = '가을의 쓸쓸함을 달래줄 달콤한 사랑 영화'
 
 okt = Okt()
 df_stopwords = pd.read_csv('./stopwords.csv')

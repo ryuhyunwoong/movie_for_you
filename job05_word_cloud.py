@@ -9,7 +9,7 @@ font_name = font_manager.FontProperties(fname = font_path).get_name()
 plt.rc('font', family = 'NanumBarunGothic')
 
 df = pd.read_csv('./crawling_data2/cleaned_one_review.csv')
-words = df.iloc[638, 1].split()
+words = df.iloc[1422, 1].split()
 print(words)
 
 worddict = collections.Counter(words) # 유니크한 값 카운트
