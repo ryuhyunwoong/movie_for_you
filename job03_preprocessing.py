@@ -43,3 +43,4 @@ print(df.head(10))
 df.info()
 
 df.to_csv('./crawling_data2/cleaned_review.csv', index = False)
+
