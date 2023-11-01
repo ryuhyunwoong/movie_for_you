@@ -55,7 +55,7 @@ with open('./models/tfidf.pickle', 'rb') as f:
 ## 문장기반으로 추천 해주기 ##
 okt = Okt()
 
-sentence = '화려한 액션영화'
+sentence = '겨울에 잘 어울리는 영화'
 sentence = re.sub('[^가-힣]',' ',sentence)
 tokened_sentence = okt.pos(sentence, stem=True)
 

@@ -7,12 +7,15 @@ df.info()
 
 okt = Okt()
 
+## stopwords파일로 불용어 리스트 생성
 df_stopwords = pd.read_csv('./stopwords.csv')
 stopwords = list(df_stopwords['stopword'])
 
+## 텍스트 전처리
 count = 0
 cleaned_sentences = []
 
+## review열 반복하여 불용어 제외한 단어 추출하여 cleaned_sentences리스트에 추가
 for review in df.review:
     count += 1
     if count % 100 == 0:
@@ -35,6 +38,7 @@ for review in df.review:
                 words.append(word)
     cleaned_sentence = ' '.join(words)
     cleaned_sentences.append(cleaned_sentence)
+
 
 df['cleaned_sentences'] = cleaned_sentences
 df = df[['title', 'cleaned_sentences']]
