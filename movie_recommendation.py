@@ -20,7 +20,7 @@ Tfidf_matrix = mmread('./models/Tfidf_movie_review.mtx').tocsr()
 with open('./models/tfidf.pickle', 'rb') as f:
     Tfidf = pickle.load(f)
 
-############################## 영화 리뷰 기반 추천##############################
+############################## 영화 리뷰 기반 추천 ##############################
 # print(df_reviews.iloc[383, 0])
 # cosine_sim = linear_kernel(Tfidf_matrix[383], Tfidf_matrix)
 # print(cosine_sim[0])
@@ -28,7 +28,7 @@ with open('./models/tfidf.pickle', 'rb') as f:
 # recommendation = getRecommendation(cosine_sim)
 # print(recommendation)
 
-# keyword 기반 추천
+################### keyword 기반 추천 #############################
 # embedding_model = Word2Vec.load('./models/word2vec_movie_review.model')
 # keyword = '마블'
 # try:
